@@ -21,6 +21,8 @@ namespace Shake
 
             foreach (Point i in LP) i.Draw();
 
+            HorLine line = new HorLine();
+            line.Draw();
 
             Console.ReadLine();
         }
