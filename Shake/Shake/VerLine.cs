@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shake
 {
-    class VerLine
+    class VerLine:Figur
     {
-        List<Point> pList;
 
         public VerLine(int x, int yU, int yD, char sym)
         {
@@ -19,13 +18,6 @@ namespace Shake
                 pList.Add(p);
             }
 
-        }
-        public void Draw()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
-            }
         }
 
 

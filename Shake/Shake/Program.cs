@@ -10,22 +10,19 @@ namespace Shake
     {
         static void Main(string[] args)
         {
-            Point t1 = new Point(0, 3, '@');
-            Point t2 = new Point(1, 5, '#');
-            Point t3 = new Point(2, 2, '$');
+            Console.SetBufferSize(80,25);
 
-            List<Point> LP = new List<Point>();
-            LP.Add(t1);
-            LP.Add(t2);
-            LP.Add(t3);
+            HorLine lineGU = new HorLine(0,78,0,'#');
+            lineGU.Draw();
+            HorLine lineGD = new HorLine(0,78,24,'#');
+            lineGD.Draw();
+            VerLine lineVL = new VerLine(0, 0, 24, '#');
+            lineVL.Draw();
+            VerLine lineVR = new VerLine(78, 0, 24, '#');
+            lineVR.Draw();
 
-            foreach (Point i in LP) i.Draw();
-
-            HorLine lineG = new HorLine(8,19,10,'$');
-            lineG.Draw();
-
-            VerLine  lineV= new VerLine(20, 5, 20, '@');
-            lineV.Draw();
+            Point p = new Point(4, 5, '@');
+            p.Draw();
 
             Console.ReadLine();
         }

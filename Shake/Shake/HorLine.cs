@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shake
 {
-    class HorLine
+    class HorLine:Figur
     {
-        List<Point> pList;
 
         public HorLine(int xL,int xR,int y,char sym)
         {
@@ -18,14 +17,6 @@ namespace Shake
                 Point p = new Point(x,y,sym);
                 pList.Add(p);
             }
-        }
-        public void Draw()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();
-            }
-
         }
     }
 }
