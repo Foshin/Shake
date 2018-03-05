@@ -21,8 +21,11 @@ namespace Shake
 
             foreach (Point i in LP) i.Draw();
 
-            HorLine line = new HorLine(8,19,10,'$');
-            line.Draw();
+            HorLine lineG = new HorLine(8,19,10,'$');
+            lineG.Draw();
+
+            VerLine  lineV= new VerLine(20, 5, 20, '@');
+            lineV.Draw();
 
             Console.ReadLine();
         }
