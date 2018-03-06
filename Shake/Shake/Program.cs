@@ -22,7 +22,8 @@ namespace Shake
             lineVR.Draw();
 
             Point p = new Point(4, 5, '@');
-            p.Draw();
+            Shake Sh = new Shake(p, 10, Direct.RIGHT);
+            Sh.Draw();
 
             Console.ReadLine();
         }
