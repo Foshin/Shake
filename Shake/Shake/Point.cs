@@ -14,6 +14,7 @@ namespace Shake
 
         public Point()
         {
+
         }
 
         public Point(int _x,int _y,char _sym)
@@ -23,10 +24,42 @@ namespace Shake
             sym = _sym;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset,Direct Direct)
+        {
+            if( Direct == Direct.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if( Direct == Direct.LEFT)
+            {
+                x = x - offset;
+            }
+            else if( Direct == Direct.UP)
+            {
+                y = y - offset;
+            }
+            else if( Direct == Direct.DOWN)
+            {
+                y = y + offset;
+            }
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
 
     }
