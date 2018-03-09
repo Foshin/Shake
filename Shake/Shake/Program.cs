@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Shake
@@ -24,6 +25,24 @@ namespace Shake
             Point p = new Point(4, 5, '@');
             Shake Sh = new Shake(p, 10, Direct.RIGHT);
             Sh.Draw();
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+            Sh.Move();
+            Thread.Sleep(300);
+
+
 
             Console.ReadLine();
         }
