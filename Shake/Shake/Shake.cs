@@ -8,7 +8,7 @@ namespace Shake
 {
     class Shake:Figur
     {
-        Direct Direct;
+        public Direct Direct;
 
         public Shake(Point End,int Rzm, Direct _Direct)
         {
@@ -42,5 +42,18 @@ namespace Shake
             return nextPoint;
 
         }
+
+        public void PressKey(ConsoleKey k)
+        {
+            if (k == ConsoleKey.LeftArrow)
+                Direct = Direct.LEFT;
+            else if (k == ConsoleKey.RightArrow)
+                Direct = Direct.RIGHT;
+            else if (k == ConsoleKey.UpArrow)
+                Direct = Direct.UP;
+            else if (k == ConsoleKey.DownArrow)
+                Direct = Direct.DOWN;
+        }
+
     }
 }

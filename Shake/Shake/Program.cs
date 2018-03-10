@@ -25,24 +25,18 @@ namespace Shake
             Point p = new Point(4, 5, '@');
             Shake Sh = new Shake(p, 10, Direct.RIGHT);
             Sh.Draw();
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
-            Sh.Move();
-            Thread.Sleep(300);
 
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo k = Console.ReadKey(true);
+                    Sh.PressKey(k.Key);
+                }
 
+                Thread.Sleep(100);
+                Sh.Move();
+            }
 
             Console.ReadLine();
         }
